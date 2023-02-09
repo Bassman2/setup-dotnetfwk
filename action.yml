@@ -1,0 +1,15 @@
+name: 'setup-dotnetfwk'
+description: 'Install dotnetfwk'
+author: 'Ralf Beckers'
+
+inputs:
+  version: 
+    description:  'version of dotnetfwk to install'
+    required: true
+    default: '40'
+    
+runs:
+  using: "composite"
+  steps:
+    - run: ${{ github.action_path }}/setup.ps1 -version ${{ inputs.version }}
+      shell: pwsh
