@@ -20,6 +20,6 @@ $setupDotNet40 = Join-Path -Path $PSScriptRoot -ChildPath "setup\dotNetFx40_Full
 					
 Write-Host "Install .NET Framework 4.0"
 
-. $setupDotNet40 /q /norestart
+cmd /c start /wait $setupDotNet40 /lcid 1031 /passive /norestart
 
 Write-Host ".NET Framework 4.0 installed" -ForegroundColor Green	
